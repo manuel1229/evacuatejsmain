@@ -79,11 +79,28 @@
     var dataRefsite = database.ref("evacsite");
     var checklocsiteTag = "Taguig";
     var checklocsiteCal = "Caloocan";
+    var checklocsiteMan = "Manila";
+    var checklocsiteMar = "Marikina";
+    var checklocsiteLas = "Las Piñas";
+    var checklocsiteMun = "Muntinlupa";
+    var checklocsiteVal = "Valenzuela";
+    var checklocsitePas = "Pasay";
+    var checklocsiteNav = "Navotas";
+    var checklocsitePar = "Parañaque";
+
     // Read the data once
     dataRefsite.once("value", function(snapshot) {
     // Keep track of the number of matching children
     var countTag = 0;
     var countCal = 0;
+    var countMan = 0;
+    var countMar = 0;
+    var countLas = 0;
+    var countMun = 0;
+    var countVal = 0;
+    var countPas = 0;
+    var countNav = 0;
+    var countPar = 0;
     
     // Iterate through the children of the snapshot
     snapshot.forEach(function(childSnapshot) {
@@ -94,22 +111,55 @@
       if (childValue === checklocsiteTag) {
         countTag++;
       }
+
+      if (childValue === checklocsiteCal) {
+        countCal++;
+      }
+
+      if (childValue === checklocsiteMar) {
+        countMar++;
+      }
+
+      if (childValue === checklocsiteMan) {
+        countMan++;
+      }
+      if (childValue === checklocsiteLas) {
+        countLas++;
+      }
+
+      if (childValue === checklocsiteMun) {
+        countMun++;
+      }
+      if (childValue === checklocsiteVal) {
+        countVal++;
+      }
+
+      if (childValue === checklocsitePas) {
+        countPas++;
+      }
+      if (childValue === checklocsiteNav) {
+        countNav++;
+      }
+
+      if (childValue === checklocsitePar) {
+        countPar++;
+      }
     });
 
 
-    snapshot.forEach(function(childSnapshot) {
-        // Get the value of the child
-        var childValue = childSnapshot.val().city;
+    // snapshot.forEach(function(childSnapshot) {
+    //     // Get the value of the child
+    //     var childValue = childSnapshot.val().city;
     
-        // Check if the value matches
-        if (childValue === checklocsiteCal) {
-          countCal++;
-        }
-      });
+    //     // Check if the value matches
+    //     if (childValue === checklocsiteCal) {
+    //       countCal++;
+    //     }
+    //   });
             
    
     // Log the count
-    console.log("Number of children with value " + checklocsiteTag + ": " + countTag);
+
 
 
     document.getElementById("piechart").innerHTML=`<canvas id="ppiechart" height="223"></canvas>` ;
@@ -119,10 +169,19 @@
         type: 'pie',
         data: {
             datasets: [{
-                data: [countTag, countCal],
+                data: [countTag, countCal, countMan, countMar, countLas, countMun, countVal, countPas, countNav, countPar],
                 backgroundColor: [
                     '#FCC2FC',
-                    '#C9F4AA'
+                    '#C9F4AA',
+                    '#4E6E81',
+                    '#865DFF',
+                    '#FDD36A',
+                    '#3A98B9',
+                    '#4D455D',
+                    '#FFB84C',
+                    '#C92C6D',
+                    '#FF8B13'
+
                 ],
                 borderWidth : 3
             }],
@@ -130,7 +189,16 @@
             // These labels appear in the legend and in the tooltips when hovering different arcs
             labels: [
                 'Taguig',
-                'Caloocan'
+                'Caloocan',
+                'Manila',
+                'Marikina',
+                'Las Piñas',
+                'Muntinlupa',
+                'Valenzuela',
+                'Pasig',
+                'Navotas',
+                'Parañaque'
+
                 
             ],
            

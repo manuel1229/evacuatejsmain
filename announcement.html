@@ -213,7 +213,7 @@ function toModal(title, description){
     modal = document.getElementById('modal')
 }
 
-        //view data
+
     
 </script>
 
@@ -222,121 +222,10 @@ function toModal(title, description){
 <script src="asset/js/announcement.js"></script>
 
 
-    <!-- <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
-        import { getDatabase, set, ref, push, child, onValue } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
-       
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-
-            apiKey: "AIzaSyAWxOG4S19cvaF0EQjZzQmEho-Wyi-klzk",
-            authDomain: "evacuateisucc.firebaseapp.com",
-            databaseURL: "https://evacuateisucc-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "evacuateisucc",
-            storageBucket: "evacuateisucc.appspot.com",
-            messagingSenderId: "538255187251",
-            appId: "1:538255187251:web:55ee2fcbfaf277dc037246",
-            measurementId: "G-F2YCWLTF13"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const database = getDatabase(app);
-       
-        const announcementRef = ref(database, "announcement");
-        let db = firebase.database();
-        let tbody = document.getElementById('tbody');
-        let titleV = document.getElementById('title');
-        let descriptionV = document.getElementById('description'); -->
-        
-
-        // getData.addEventListener("click", (e) => {
-        //     $('#dataTbl td').remove();
-        //     var row = document.getElementById("dataTbl")
-        //     //  row.deleteCell(0);
-        //     const dbRef = ref(database, "announcement");
-
-        //     onValue(dbRef, (snapshot) => {
-        //         snapshot.forEach((childSnapshot) => {
-        //             const childKey = childSnapshot.key;
-        //             const childData = childSnapshot.val();
-        //             // ...
-                    
-        //             var row =
-        //                 "<tr><td style=display:none>" +
-        //                 childData.id +
-        //                 "</td><td>" +
-        //                 childData.title +
-        //                 "</td><td>" +
-        //                 childData.description +
-        //                 "</td><td>" +
-        //                 "<a toggle=modal class='btn btn-primary' href='#modal-form'>Update</a>" +
-        //                 "</td></tr>";
-
-        //         $(row).appendTo("#dataTbl");
-        //         });
-        //     }, {
-        //         onlyOnce: true
-        //     });
-        // })
+ 
 
 
-       
-    
-    // onValue(announcementRef, (snapshot) => {
-    // const datas = snapshot.val();
-    
-    // console.log(datas);
-    // for(data in datas)
-    // {
-    //     // console.log(datas[data]);
-    //     let tr = `
-    //     <tr>
-    //         <td>${datas[data].title}</td>
-    //         <td>${datas[data].description}</td>
-    //         <td>
-    //             <button class="btn btn-primary">Update</button>
-    //         </td>
-    //     </tr>
-    //     `
-    //     tablebody.innerHTML += tr;
-    // }
-    // });
-
-    // function editRow(id){
-    //     console.log(id);
-    // }
-
-    //tutor1
-
-//     db.ref('announcement').on('value', viewdata);
-//     function viewdata(snapshot){
-//         let table='';
-//         let no = 1;
-//         snapshot.forEach((data)=> {
-//             table += `
-//             <tr>
-//                 <th scope="row">1</th>
-//                 <td>${data.val().title}</td>
-//                 <td>${data.val().description}</td>  
-//                 <td><button>Update</button></td>
-//             </tr>
-//         `;              
-//         });
-//     tbody.innerHTML = table;
-//   }
-
-
-     <!-- </script> -->
-
-    <!-- <script src="js/form.js"></script> -->
+  
     
 
 </body>
