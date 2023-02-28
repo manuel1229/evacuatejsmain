@@ -8355,6 +8355,20 @@ body.landing-page {
   background-color: #1dc5a3;
   border-color: #1dc5a3;
 }
+
+@media(max-width: 420px) and (min-width:360px ) {
+  .landing-page .header-back.one {
+  background-size: auto 50vh;
+  }
+}
+@media(max-width: 768px) and (min-width:640px ) {
+  .landing-page .header-back.one {
+  background-size: auto 80vh;
+  }
+}
+
+
+
 @media (min-width: 768px) {
   .landing-page {
     /* Navbar positioning foo */
@@ -8362,8 +8376,7 @@ body.landing-page {
     /* Bump up size of carousel content */
   }
   .landing-page .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
   }
   .landing-page .navbar-wrapper .navbar {
     padding-right: 0;
@@ -8460,7 +8473,7 @@ body.landing-page {
     border: none;
   }
   .landing-page .nav.navbar-right {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 .landing-page .navbar-toggle {
