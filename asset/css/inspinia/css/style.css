@@ -8042,7 +8042,9 @@ body.landing-page {
   width: 100%;
 }
 .landing-page .header-back.one {
-  background: url('../img/landing/landing.jpg') 0 0 no-repeat;
+  background: url('../img/landing/background.png') no-repeat;
+  background-size: auto 155vh;
+  background-position: center, -50%;
 }
 .landing-page .header-back.two {
   background: url('../img/landing/landing.jpg') 50% 0 no-repeat;
