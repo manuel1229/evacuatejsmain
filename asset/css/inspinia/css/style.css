@@ -9835,3 +9835,29 @@ body.md-skin {
     margin: 0;
   }
 }
+
+/* Custom ko(Karl) */
+
+.section-title {
+  text-align: center;
+}
+
+.section-title > h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-decoration: 3px underline;
+  
+}
+
+.guidelines {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: .625rem;
+}
+
+.guideline {
+  background-color: maroon;
+  height: 600px;
+  width: 400px;
+}
