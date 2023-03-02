@@ -60,19 +60,12 @@
     </div>
 
 
-    <div id="inSlider" class="carousel slide" data-ride="carousel" >
-      
-        <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
+    
               
-                <!-- Set background for slide in css -->
-                <div class="header-back one"></div>
+    <!-- Set background for slide in css -->
+    <div class="header-back one"></div>
 
-            </div>
-       
-        </div>
-        
-    </div>
+            
    
 
     <section  class="container services" id="platform">
@@ -203,8 +196,7 @@
     <div class="modal inmodal" id="loginModal" tabindex="-1" role="dialog"  aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content animated fadeIn">
-                <!-- <form class="m-t" id="frmLogin" role="form"> -->
-                    
+                <form class="m-t" id="frmLogin" role="form">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">
                             <span aria-hidden="true">&times;</span>
@@ -218,19 +210,15 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <form id="loginData">
                                 <div class="form-group">
-                                   
-
-                                    <input type="email" class="form-control" placeholder="Username" name="username" id="email" autofocus autocomplete="off" required>
+                                    <input type="text" class="form-control" placeholder="Username" name="username" id="email" autofocus autocomplete="off">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" name="0password" id="password"  placeholder="Password" autocomplete="off" required>
+                                    <input type="password" class="form-control" name="0password" id="password"  placeholder="Password" autocomplete="off">
                                 </div>
                                 <br>
 
                                 <button id="signin" type="submit" class="btn btn-primary block full-width m-b">Login</button>
-                                </form>
                                 <!-- <p class="text-muted text-center">
                                     <a href="#" data-toggle="modal" onclick="forgotpassword()">
                                         Forgot password
@@ -239,14 +227,14 @@
 
                                 <p class="text-muted text-center">
                                     Don't have an account?
-                                    <a href="register.html">
+                                    <a href="registration">
                                         Click Here
                                     </a>
                                 </p>
                             </div>
                         </div>
                     </div>
-                <!-- </form> -->
+                </form>
             </div>
         </div>
     </div>
@@ -468,7 +456,7 @@
             return Number(value) > 0;
         }, 'Enter a valid number.');
     </script>
-    <!-- <script type="module">
+    <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
@@ -489,8 +477,6 @@
             appId: "1:880708938906:web:be4eaf69a49e0b5d99c323",
             measurementId: "G-EKMCWF5M2Z"
         };
-
-        
       
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
@@ -507,7 +493,7 @@
         // Signed in 
         const user = userCredential.user;
         
-    alert('success'+ user.key);
+    alert('success');
     window.location.href ="dashboard.html";
         // ...
       })
@@ -517,16 +503,7 @@
         alert('invalid username or password');
       });
     });
-
-    
-      </script> -->
-
-      <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@9.14.4/dist/sweetalert2.all.min.js"></script>
-
-      <script type="text/javascript" src="asset/js/login.js"></script>
+      </script>
     
           <script type="text/javascript" src="asset/js/app.js"></script>
          
