@@ -9857,6 +9857,7 @@ body.md-skin {
 }
 
 .guideline {
+  border: 3px solid gray;
   background-color: maroon;
   height: 600px;
   width: 400px;
