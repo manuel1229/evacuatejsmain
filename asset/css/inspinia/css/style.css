@@ -8046,7 +8046,9 @@ body.landing-page {
   width: 100%;
 }
 .landing-page .header-back.one {
-  background: url('../img/landing/landing.jpg') 0 0 no-repeat;
+  background: url('../img/landing/background.png') no-repeat;
+  background-size: auto 160vh;
+  background-position: center, -50%;
 }
 .landing-page .header-back.two {
   background: url('../img/landing/landing.jpg') 50% 0 no-repeat;
@@ -8357,6 +8359,25 @@ body.landing-page {
   background-color: #1dc5a3;
   border-color: #1dc5a3;
 }
+
+@media(max-width: 420px) and (min-width:360px ) {
+  .landing-page .header-back.one {
+  background-size: auto 50vh;
+  }
+}
+@media(max-width: 768px) and (min-width:640px ) {
+  .landing-page .header-back.one {
+  background-size: auto 80vh;
+  }
+}
+@media(max-width: 1640px) and (min-width: 768px) {
+  .landing-page .header-back.one {
+  background-size: auto 200vh;
+  }
+}
+
+
+
 @media (min-width: 768px) {
   .landing-page {
     /* Navbar positioning foo */
@@ -8364,8 +8385,7 @@ body.landing-page {
     /* Bump up size of carousel content */
   }
   .landing-page .navbar-wrapper .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
   }
   .landing-page .navbar-wrapper .navbar {
     padding-right: 0;
@@ -8462,7 +8482,7 @@ body.landing-page {
     border: none;
   }
   .landing-page .nav.navbar-right {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
 .landing-page .navbar-toggle {
@@ -9818,4 +9838,30 @@ body.md-skin {
   #page-wrapper {
     margin: 0;
   }
+}
+
+/* Custom ko(Karl) */
+
+.section-title {
+  text-align: center;
+}
+
+.section-title > h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-decoration: 3px underline;
+  
+}
+
+.guidelines {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: .625rem;
+}
+
+.guideline {
+  background-color: maroon;
+  height: 600px;
+  width: 400px;
 }
