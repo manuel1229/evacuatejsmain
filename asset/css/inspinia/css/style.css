@@ -6,6 +6,10 @@
  *   version 2.9.3
  *
 */
+.swal2-container {
+  z-index: 20000 !important;
+}
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../fonts/glyphicons-halflings-regular.eot');

@@ -87,6 +87,9 @@
     var checklocsitePas = "Pasay";
     var checklocsiteNav = "Navotas";
     var checklocsitePar = "Parañaque";
+    var checklocsiteMan = "Mandaluyong";
+    var checklocsiteSan = "San Juan";
+    var checklocsiteQue = "Quezon City";
 
     // Read the data once
     dataRefsite.once("value", function(snapshot) {
@@ -101,6 +104,9 @@
     var countPas = 0;
     var countNav = 0;
     var countPar = 0;
+    var countMan = 0;
+    var countSan = 0;
+    var countQue = 0;
     
     // Iterate through the children of the snapshot
     snapshot.forEach(function(childSnapshot) {
@@ -144,6 +150,18 @@
       if (childValue === checklocsitePar) {
         countPar++;
       }
+
+      if (childValue === checklocsiteMan) {
+        countMan++;
+      }
+
+      if (childValue === checklocsiteSan) {
+        countSan++;
+      }
+
+      if (childValue === checklocsiteQue) {
+        countQue++;
+      }
     });
 
 
@@ -166,10 +184,10 @@
     var ctxx = document.getElementById("ppiechart").getContext('2d');
     var ppiechart = new Chart(ctxx,{
 
-        type: 'pie',
+        type: 'doughnut',
         data: {
             datasets: [{
-                data: [countTag, countCal, countMan, countMar, countLas, countMun, countVal, countPas, countNav, countPar],
+                data: [countTag, countCal, countMan, countMar, countLas, countMun, countVal, countPas, countNav, countPar, countMan, countSan, countQue],
                 backgroundColor: [
                     '#FCC2FC',
                     '#C9F4AA',
@@ -180,7 +198,10 @@
                     '#4D455D',
                     '#FFB84C',
                     '#C92C6D',
-                    '#FF8B13'
+                    '#FF8B13',
+                    '#9DC08B',
+                    '#443C68',
+                    '#B2A4FF'
 
                 ],
                 borderWidth : 3
@@ -197,7 +218,10 @@
                 'Valenzuela',
                 'Pasig',
                 'Navotas',
-                'Parañaque'
+                'Parañaque',
+                'Mandaluyong',
+                'San Juan',
+                'Quezon City'
 
                 
             ],
