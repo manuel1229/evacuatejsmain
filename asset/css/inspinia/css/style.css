@@ -8043,7 +8043,7 @@ body.landing-page {
 }
 .landing-page .header-back.one {
   background: url('../img/landing/background.png') no-repeat;
-  background-size: auto 155vh;
+  background-size: auto 160vh;
   background-position: center, -50%;
 }
 .landing-page .header-back.two {
@@ -8364,6 +8364,11 @@ body.landing-page {
 @media(max-width: 768px) and (min-width:640px ) {
   .landing-page .header-back.one {
   background-size: auto 80vh;
+  }
+}
+@media(max-width: 1640px) and (min-width: 768px) {
+  .landing-page .header-back.one {
+  background-size: auto 200vh;
   }
 }
 
@@ -9829,4 +9834,30 @@ body.md-skin {
   #page-wrapper {
     margin: 0;
   }
+}
+
+/* Custom ko(Karl) */
+
+.section-title {
+  text-align: center;
+}
+
+.section-title > h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-decoration: 3px underline;
+  
+}
+
+.guidelines {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: .625rem;
+}
+
+.guideline {
+  background-color: maroon;
+  height: 600px;
+  width: 400px;
 }
