@@ -365,7 +365,8 @@ $("#myTable").on("click", ".btnDelete", function() {
         showCancelButton: true,
         confirmButtonColor:'#d33',
         cancelButtonColor: '#3085db',
-        confirmButtonText: 'Confirm'
+        confirmButtonText: 'Confirm',
+        reverseButtons: true
 
     }).then((result)=>{
         if (result.value){
@@ -374,7 +375,7 @@ $("#myTable").on("click", ".btnDelete", function() {
         let fill = $('#myTable').dataTable().fnGetData($(this).closest('tr'));
         let id = fill[1];
         database.ref(`histories/${id}`).remove()
-        Swal.fire('Delete', 'wala na finish na ', 'success')
+        Swal.fire('Success', 'record deleted successfully ', 'success')
 
         table1.clear().draw();
         loadData();
