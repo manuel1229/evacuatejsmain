@@ -9853,15 +9853,17 @@ body.md-skin {
   
 }
 
-.guidelines {
+.guidelines, .infos {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: .625rem;
 }
 
-.guideline {
+.guideline, .info {
   background-color: maroon;
   height: 600px;
   width: 400px;
+  border: 4px solid gray;
+  border-radius: 5px;
 }
